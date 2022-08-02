@@ -1,0 +1,44 @@
+.movie_tile {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(20, minmax(100px, 1fr));
+    row-gap: 50px;
+    column-gap: 165px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding: 5%;
+    text-decoration: none;
+}
+
+.movie_poster {
+    border: 1px solid; color: rgb(39, 39, 39); 
+    box-shadow: 0 1px 2px gray;
+    transition: box-shadow 0.3s ease-in-out;
+    transition: transform 0.25s ease-in-out;
+}
+
+.movie_bar {
+    width: auto;
+    height: auto;
+    margin: 1%;
+    padding-left: %;
+    white-space: nowrap;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.movie_bar::-webkit-scrollbar {
+    display: none;
+    padding: none;
+}
+
+.movie_poster:hover {
+    transform: scale(1.08);
+    box-shadow: 0 5px 5px gray;
+}
+
+.homepage_header {
+
+}
