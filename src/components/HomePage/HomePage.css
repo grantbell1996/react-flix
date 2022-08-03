@@ -8,6 +8,26 @@
     padding-right: 50px;
     padding: 5%;
     text-decoration: none;
+    white-space: nowrap;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.movie_tile::-webkit-scrollbar {
+    display: none;
+    padding: none;
+}
+
+.site_header {
+    height: auto;
+    width: 30%;
+    padding: %;
+}
+
+.genre_header {
+    padding-left: 4%;
 }
 
 .movie_poster {
@@ -22,16 +42,6 @@
     height: auto;
     margin: 1%;
     padding-left: 0%;
-    white-space: nowrap;
-    position: relative;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-}
-
-.movie_bar::-webkit-scrollbar {
-    display: none;
-    padding: none;
 }
 
 .movie_poster:hover {
