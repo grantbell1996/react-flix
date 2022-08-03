@@ -7,6 +7,7 @@ export const HomePage = () => {
   const [popMovies, setPopMovies] = useState([]);
   const [trendMovies, setTrendMovies] = useState([]);
   const [actionMovies, setActionMovies] = useState([]);
+  const [searchedMovies, setSearchedMovies] = useState([]);
 
   useEffect(() => {
     //location of the fetch is the customers in the api
@@ -27,6 +28,16 @@ export const HomePage = () => {
       .then((res) => res.json())
       .then((data) => {
         setTrendMovies(data.results);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch(`https://api.themoviedb.org/3/discover/movie/?with_genres=28&api_key=e623222adcf057666d3c1dd36f72f3d6`
+    )
+      //retrieve the data from the api in json format
+      .then((res) => res.json())
+      .then((data) => {
+        setActionMovies(data.results);
       });
   }, []);
 

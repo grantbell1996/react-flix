@@ -1,0 +1,18 @@
+.movie_cont {
+    display: flex;
+    padding-left: 3%;
+}
+
+.movie_page_poster {
+    border: 1px solid; color: rgb(39, 39, 39); 
+}
+
+.movie_header {
+    padding-left: 3%;
+    padding-right: 3%;
+
+}
+
+.movie_overview {
+    padding: 1%;
+}
