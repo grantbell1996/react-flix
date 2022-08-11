@@ -30,6 +30,32 @@
     padding-left: 4%;
 }
 
+.pick_backdrop {
+    height: auto;
+    width: 300px;
+    margin-left: 10%;
+    margin-right: 30%;
+    border: 1px solid; color: rgb(39, 39, 39);
+    
+}
+
+.pick_overview {
+    padding: 3%;
+}
+
+.pick_date {
+    padding-left: 3%
+}
+
+.pick_details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.picks_container {
+    display: flex;
+}
+
 .movie_poster {
     border: 1px solid; color: rgb(39, 39, 39); 
     box-shadow: 0 1px 2px gray;
