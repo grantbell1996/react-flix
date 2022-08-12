@@ -8,19 +8,18 @@ export const HomePage = () => {
   const [trendMovies, setTrendMovies] = useState([]);
   const [moviePick, setMoviePick] = useState({});
   const [actionMovies, setActionMovies] = useState([]);
-  const movieId = Math.floor(Math.random() * 5) + 1;
 
   useEffect(() => {
     //location of the fetch is the single movie id in the api
     fetch(
-      `https://api.themoviedb.org/3/movie/${movieId}?api_key=e623222adcf057666d3c1dd36f72f3d6`
+      `https://api.themoviedb.org/3/movie/5?api_key=e623222adcf057666d3c1dd36f72f3d6`
     )
       //retrieve the data from the api in json format
       .then((res) => res.json())
       .then((data) => {
         setMoviePick(data);
       });
-  }, [movieId]);
+  }, []);
 
   useEffect(() => {
     //location of the fetch is the customers in the api
@@ -80,29 +79,20 @@ export const HomePage = () => {
 
   return (
     <>
-      <img src={reactflixHeader} className="site_header"></img>
       <div className="picks_container">
-        <div className="picks_cont_left">
+        <img src={reactflixHeader} className="site_header"></img>
+        <div className="pick_top_details">
           <h1 className="movie_header">
             {moviePick.original_title
               ? moviePick.original_title
               : moviePick.title}
           </h1>
-          <div className="pick_details">
-            <h2 className="pick_date">{moviePick?.release_date}</h2>
-            <h2 className="pick_runtime">{moviePick?.runtime} min</h2>
-          </div>
-          <div className="pick_overview">{moviePick?.overview}</div>
+          <h2 className="pick_runtime">{moviePick?.runtime} min</h2>
         </div>
-        <div className="picks_cont_right">
-          <img
-            className="pick_backdrop"
-            src={
-              moviePick.poster_path
-                ? `https://image.tmdb.org/t/p/original/${moviePick?.poster_path}`
-                : ``
-            }
-          ></img>
+        <div className="pick_overview">{moviePick?.overview}</div>
+        <div className="pick_buttons">
+            <button className="play_pick_button">Play</button>
+            <button className="info_pick_button">More Info</button>
         </div>
       </div>
       <h2 className="genre_header">Popular Titles</h2>

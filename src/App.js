@@ -9,6 +9,7 @@ import { Navbar } from "./components/Navbar/Navbar";
 function App() {
   return (
     <>
+    <div className="application"> 
       <BrowserRouter>
         <Routes>
           
@@ -18,6 +19,7 @@ function App() {
 
         </Routes>
       </BrowserRouter>
+      </div>
     </>
   );
 }

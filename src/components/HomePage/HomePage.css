@@ -1,12 +1,12 @@
 .movie_tile {
     display: grid;
     justify-content: space-around;
-    grid-template-columns: repeat(20, minmax(100px, 1fr));
+    grid-template-columns: repeat(20, minmax(2.3%, 1fr));
     row-gap: 50px;
     column-gap: 165px;
     padding-left: 50px;
     padding-right: 50px;
-    padding: 5%;
+    padding-bottom: 0;
     text-decoration: none;
     white-space: nowrap;
     position: relative;
@@ -20,14 +20,66 @@
     padding: none;
 }
 
+.pick_buttons {
+    display: flex;
+    margin-left: 3%;
+    justify-content: space-around;
+    width: 260px;
+    height: auto
+}
+
+.play_pick_button {
+    background-color: rgb(255, 255, 255);
+    border: 0px solid; color: rgb(0, 0, 0);
+    border-radius: 3px;
+    height: 30px;
+    width: 90px;
+    display: flex;
+    color: rgb(0, 0, 0);
+    justify-content: center;
+    font-size: 130%;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform .2s;
+}
+
+.play_pick_button:hover {
+    transform: scale(1.2)
+}
+
+.info_pick_button {
+    background-color: rgb(137, 137, 137);
+    border: 0px solid; color: rgb(0, 0, 0);
+    border-radius: 3px;
+    height: 30px;
+    padding-top: 2px;
+    width: 120px;
+    display: flex;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    font-size: 131%;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform .2s;
+}
+
+.info_pick_button:hover {
+    transform: scale(1.2)
+}
+
 .site_header {
     height: auto;
-    width: 30%;
-    padding: 0%;
+    width: 20%;
+    padding-left: 1.5%;
+}
+
+.movie_header {
+    color: antiquewhite;
 }
 
 .genre_header {
     padding-left: 4%;
+    color: antiquewhite;
 }
 
 .pick_backdrop {
@@ -41,24 +93,42 @@
 
 .pick_overview {
     padding: 3%;
+    color: antiquewhite;
+    max-width: 400px;
+    font-size: 130%;
+}
+
+.pick_top_details {
+    display: flex;
+    align-items: center;
+}
+
+.pick_runtime {
+    justify-content: center;
+    color: antiquewhite;
 }
 
 .pick_date {
-    padding-left: 3%
+    padding-left: 3%;
+    color: antiquewhite;
 }
 
 .pick_details {
-    display: flex;
+    display: ;
     justify-content: space-between;
+    color: antiquewhite;
 }
 
 .picks_container {
-    display: flex;
+    height: 700px;
+    width: 2030px;
+    background-image: url(https://m.media-amazon.com/images/M/MV5BYjVlMjc5MmQtZTBkZS00ZjkxLTk5NzItNzdlZDM1OWQxMGJmXkEyXkFqcGdeQXVyOTc5MDI5NjE@._V1_.jpg);
 }
 
 .movie_poster {
     border: 1px solid; color: rgb(39, 39, 39); 
-    box-shadow: 0 1px 2px gray;
+    border-radius: 0px;
+    box-shadow: 0 0px 0px gray;
     transition: box-shadow 0.3s ease-in-out;
     transition: transform 0.25s ease-in-out;
 }
@@ -72,7 +142,7 @@
 
 .movie_poster:hover {
     transform: scale(1.08);
-    box-shadow: 0 5px 5px gray;
+    box-shadow: 0 0px 0px gray;
 }
 
 .homepage_header {
