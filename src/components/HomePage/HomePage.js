@@ -91,8 +91,8 @@ export const HomePage = () => {
         </div>
         <div className="pick_overview">{moviePick?.overview}</div>
         <div className="pick_buttons">
-            <button className="play_pick_button">Play</button>
-            <button className="info_pick_button">More Info</button>
+            <Link className="play_pick_button" to={``}>Play</Link>
+            <Link className="info_pick_button" to={`/${moviePick.id}`}>More Info</Link>
         </div>
       </div>
       <h2 className="genre_header">Popular Titles</h2>

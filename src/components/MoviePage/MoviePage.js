@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import reactflixHeader from "../images/reactflix_header.png";
-import "./MoviePage.css"
+import "./MoviePage.css";
 
 export const MoviePage = () => {
   const [movie, setMovie] = useState({});
   const [similarMovies, setSimilarMovies] = useState([]);
-  const { movieId } = useParams()
-
+  const { movieId } = useParams();
 
   useEffect(() => {
     //location of the fetch is the single movie id in the api
@@ -38,8 +37,8 @@ export const MoviePage = () => {
       <Link to={"/"}>
         <img className="site_header" src={reactflixHeader} />
       </Link>
-        <h1 className="movie_header">{movie.title}</h1>
-        <div className="movie_cont">
+      <h1 className="movie_header">{movie.title}</h1>
+      <div className="movie_cont">
         <img
           className="movie_page_poster"
           width="300"
@@ -49,7 +48,10 @@ export const MoviePage = () => {
               : ``
           }
         />
-        <div className="movie_overview">{movie.overview}</div>
+        <div className="movie_details">
+          <div className="movie_overview">{movie.overview}</div>
+          <div className="movie_runtime">{movie.runtime} min</div>
+        </div>
       </div>
       <h2 className="movie_header">Similar Titles</h2>
       <div className="movie_tile">

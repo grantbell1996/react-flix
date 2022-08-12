@@ -14,7 +14,18 @@
 }
 
 .movie_overview {
-    padding: 1%;
+    padding: 0%;
     color: antiquewhite;
-    width: 40%;
+    width: 30%;
 }
+
+.movie_details {
+    padding: 1%;
+}
+
+.movie_runtime {
+    padding-top: 1%;
+    color: antiquewhite;
+    font-weight: 900;
+}
+
