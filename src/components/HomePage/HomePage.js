@@ -80,7 +80,16 @@ export const HomePage = () => {
   return (
     <>
       <div className="picks_container">
-        <img src={reactflixHeader} className="site_header"></img>
+        <div className="navbar">
+          <img src={reactflixHeader} className="site_header"></img>
+          <div className="navbar_right"> 
+          <Link className="my_stuff" to={``}>My Stuff</Link>
+          <div className="searchBar">
+            <label htmlFor=""></label>
+            <input className="search" placeholder="Search"></input>
+          </div>
+          </div>
+        </div>
         <div className="pick_top_details">
           <h1 className="movie_header">
             {moviePick.original_title
@@ -91,8 +100,12 @@ export const HomePage = () => {
         </div>
         <div className="pick_overview">{moviePick?.overview}</div>
         <div className="pick_buttons">
-            <Link className="play_pick_button" to={``}>Play</Link>
-            <Link className="info_pick_button" to={`/${moviePick.id}`}>More Info</Link>
+          <Link className="play_pick_button" to={``}>
+            Play
+          </Link>
+          <Link className="info_pick_button" to={`/${moviePick.id}`}>
+            More Info
+          </Link>
         </div>
       </div>
       <h2 className="genre_header">Popular Titles</h2>
